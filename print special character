@@ -1,0 +1,17 @@
+def count_special_characters(statement):
+    special_characters = "!@#$%^&*()-_=+[]{}|;:'\",.<>?/"
+    count = 0
+
+    for char in statement:
+        if char in special_characters:
+            count += 1
+
+    return count
+
+def main():
+    # Get the statement from the user
+    input_statement = input("Enter a statement: ")
+
+    # Count and print the number of special characters
+    special_count = count_special_characters(input_statement)
+    print(f"Number of special characters: {special_count}")
