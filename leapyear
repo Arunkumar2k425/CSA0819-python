@@ -1,0 +1,13 @@
+from datetime import datetime, timedelta
+user_input = input("Enter date (in the format DD/MM/YYYY): ")
+anniversary_date = datetime.strptime(user_input, "%d/%m/%Y")
+if anniversary_date.year % 4 == 0 and (anniversary_date.year % 100 != 0 or anniversary_date.year % 400 == 0):
+    is_leap_year = True
+else:
+    is_leap_year = False
+if is_leap_year:
+    next_anniversary = anniversary_date + timedelta(days=366)
+    print(f"Given anniversary year: Leap year. Next anniversary date: {next_anniversary.strftime('%d/%m/%Y')}")
+else:
+    previous_anniversary = anniversary_date - timedelta(days=365)
+    print(f"Given anniversary year: Non-leap year. Previous anniversary date: {previous_anniversary.strftime('%d/%m/%Y')}")
