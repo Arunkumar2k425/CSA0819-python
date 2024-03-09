@@ -1,0 +1,24 @@
+def calculate_total_amount(denominations, notes):
+    total_amount = 0
+    for i in range(len(denominations)):
+        total_amount += denominations[i] * notes[i]
+    return total_amount
+
+def main():
+    # Denominations available in the ATM
+    available_denominations = [2000, 500, 200, 100]
+    
+    # Get the number of notes for each denomination from the user
+    notes = []
+    for denomination in available_denominations:
+        num_notes = int(input(f"Enter the number of {denomination}-rupee notes: "))
+        notes.append(num_notes)
+    
+    # Calculate the total amount based on user input
+    total_amount = calculate_total_amount(available_denominations, notes)
+    
+    # Display the total amount available in the ATM
+    print(f"Total Amount Available in ATM: {total_amount} rupees")
+
+if __name__ == "__main__":
+    main()
