@@ -1,0 +1,21 @@
+def reverse_word(word):
+    reversed_word = ""
+    
+    # Iterate through the characters of the word in reverse order
+    for i in range(len(word) - 1, -1, -1):
+        reversed_word += word[i]
+    
+    return reversed_word
+
+def main():
+    # Get the word from the user
+    input_word = input("Enter a word: ")
+    
+    # Reverse the word using the custom function
+    reversed_result = reverse_word(input_word)
+    
+    # Print the reversed word
+    print(f"Reversed Word: {reversed_result}")
+
+if __name__ == "__main__":
+    main()
