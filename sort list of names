@@ -1,0 +1,19 @@
+def sort_names(names, order):
+    sorted_names = sorted(names, reverse=(order == 'desc'))
+    return sorted_names
+
+def main():
+    # Get the list of names from the user
+    names = input("Enter names separated by spaces: ").split()
+
+    # Get the sorting order from the user
+    order = input("Enter 'asc' for ascending order or 'desc' for descending order: ")
+
+    # Validate user input
+    if order not in ['asc', 'desc']:
+        print("Invalid choice. Please enter 'asc' or 'desc'.")
+        return
+
+    # Sort and print the names
+    sorted_names = sort_names(names, order)
+    print(f"Sorted Names ({order}): {', '.join(sorted_names)}")
