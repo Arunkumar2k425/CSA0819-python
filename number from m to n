@@ -1,0 +1,13 @@
+def print_numbers_with_skip(m, n, k):
+    while m <= n:
+        print(m, end=", ")
+        m += k
+
+def main():
+    # Get the input values from the user
+    m = int(input("Enter the starting number (M): "))
+    n = int(input("Enter the ending number (N): "))
+    k = int(input("Enter the number of skips (K): "))
+
+    # Print numbers with skip
+    print_numbers_with_skip(m, n, k)
