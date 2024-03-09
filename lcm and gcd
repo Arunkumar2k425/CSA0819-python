@@ -1,0 +1,27 @@
+import math
+
+def calculate_lcm(x, y):
+    return abs(x * y) // math.gcd(x, y)
+
+def find_lcm_of_numbers(numbers):
+    lcm_result = 1
+    for number in numbers:
+        lcm_result = calculate_lcm(lcm_result, number)
+    return lcm_result
+
+def find_gcd_of_numbers(numbers):
+    gcd_result = numbers[0]
+    for number in numbers[1:]:
+        gcd_result = math.gcd(gcd_result, number)
+    return gcd_result
+
+def main():
+    # Get the list of numbers from the user
+    num_list = list(map(int, input("Enter space-separated numbers: ").split()))
+
+    # Calculate and print LCM and GCD
+    lcm_result = find_lcm_of_numbers(num_list)
+    gcd_result = find_gcd_of_numbers(num_list)
+
+    print(f"LCM of {num_list}: {lcm_result}")
+    print(f"GCD of {num_list}: {gcd_result}")
