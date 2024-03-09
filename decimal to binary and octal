@@ -1,0 +1,22 @@
+def decimal_to_binary(decimal_num):
+    binary_result = bin(decimal_num).replace("0b", "")
+    return binary_result
+
+def decimal_to_octal(decimal_num):
+    octal_result = oct(decimal_num).replace("0o", "")
+    return octal_result
+
+def main():
+    # Get the decimal number from the user
+    decimal_number = int(input("Enter a decimal number: "))
+
+    # Convert to binary and octal
+    binary_result = decimal_to_binary(decimal_number)
+    octal_result = decimal_to_octal(decimal_number)
+
+    # Print the results
+    print(f"Binary equivalent: {binary_result}")
+    print(f"Octal equivalent: {octal_result}")
+
+if __name__ == "__main__":
+    main()
